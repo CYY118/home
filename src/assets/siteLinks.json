@@ -33,5 +33,21 @@
     "icon": "LaptopCode",
     "name": "站点监测",
     "link": "https://status.yanguk.top/"
+  },{
+    "icon": "Blog",
+    "name": "qexo后台管理",
+    "link": "https://test.yanguk.top/"
+  }, {
+    "icon": "Cloud",
+    "name": "图床",
+    "link": "https://picr.yanguk.top/#/"
+  },{
+    "icon": "Blog",
+    "name": "订阅管理系统",
+    "link": "https://sub.yangpp.dpdns.org/admin"
+  }, {
+    "icon": "Cloud",
+    "name": "waline评论",
+    "link": "https://lean-cloud.yanguk.top/ui/login?redirect=/ui/login"
   }
 ]
