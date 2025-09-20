@@ -57,6 +57,8 @@ export const getHitokoto = async () => {
 export const getAdcode = async (key) => {
   const get_ip = await fetch(`https://httpbin.org/get`);
 
+  console.log(get_ip.json());
+
   const res = await fetch(`https://restapi.amap.com/v3/ip?ip=`+get_ip+`&key=${key}`);
   return await res.json();
 };
