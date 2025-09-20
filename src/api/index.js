@@ -55,11 +55,13 @@ export const getHitokoto = async () => {
 
 // 获取高德地理位置信息
 export const getAdcode = async (key) => {
-  const get_ip = await fetch(`https://httpbin.org/get`);
+  const ipResponse = await fetch('https://httpbin.org/get');
+     if (!ipResponse.ok) throw new Error(`获取IP失败：${ipResponse.status}`);
+     
+     const ipData = await ipResponse.json();
+     const userIp = ipData.origin; // 提取用户真实IP（多IP时取第一个）
 
-  console.log(await get_ip);
-
-  const res = await fetch(`https://restapi.amap.com/v3/ip?ip=`+get_ip+`&key=${key}`);
+  const res = await fetch(`https://restapi.amap.com/v3/ip?ip=`+userIp+`&key=${key}`);
   return await res.json();
 };
 
