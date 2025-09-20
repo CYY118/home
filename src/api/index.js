@@ -55,9 +55,9 @@ export const getHitokoto = async () => {
 
 // 获取高德地理位置信息
 export const getAdcode = async (key) => {
-  const get_ip = fetch(`https://httpbin.org/get`);
+  const get_ip = await fetch(`https://httpbin.org/get`);
 
-  console.log(get_ip);
+  console.log(await get_ip);
 
   const res = await fetch(`https://restapi.amap.com/v3/ip?ip=`+get_ip+`&key=${key}`);
   return await res.json();
